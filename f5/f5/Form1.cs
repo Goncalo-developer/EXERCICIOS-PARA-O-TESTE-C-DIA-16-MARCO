@@ -15,11 +15,21 @@ namespace f5
 {
     public partial class Form1 : Form
     {
+        List<int> listaIndices = new List<int> { 2, 3, 4, 5 , 6 , 7 };
+        Random rnd = new Random();
         public Form1()
         {
             InitializeComponent();
+           
         }
 
+       
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            cbbCursos.SelectedIndex = 0;
+        }
         private void AtualizarTextoNo(TreeNode no)
         {
             string nomeOriginal = no.Name;
@@ -33,11 +43,8 @@ namespace f5
                 no.Text = nomeOriginal;
             }
         }
+        
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            cbbCursos.SelectedIndex = 0;
-        }
 
         private void txtNum_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -69,6 +76,19 @@ namespace f5
             {
                 paiExistente = new TreeNode(nomeCurso);
                 paiExistente.Name = nomeCurso;
+
+                // Lógica para não repetir a imagem do planeta/bandeira
+                if (listaIndices.Count > 0)
+                {
+                    int posicao = rnd.Next(listaIndices.Count);
+                    int imgBandeira = listaIndices[posicao];
+
+                    paiExistente.ImageIndex = imgBandeira;
+                    paiExistente.SelectedImageIndex = imgBandeira;
+
+                    listaIndices.RemoveAt(posicao); // Remove da lista para não repetir
+                }
+
                 trvInscricoes.Nodes.Add(paiExistente);
             }
 
@@ -84,10 +104,26 @@ namespace f5
             }
             else
             {
-                paiExistente.Nodes.Add(numAluno);
+                TreeNode novoFilho = new TreeNode(numAluno);
+
+                // Uso dos RadioButtons para definir Sexo (0 ou 1)
+                if (rdbMasc.Checked)
+                {
+                    novoFilho.ImageIndex = 0;
+                    novoFilho.SelectedImageIndex = 0;
+                }
+                else
+                {
+                    novoFilho.ImageIndex = 1;
+                    novoFilho.SelectedImageIndex = 1;
+                }
+
+                paiExistente.Nodes.Add(novoFilho);
                 AtualizarTextoNo(paiExistente);
             }
         }
+
+        
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {

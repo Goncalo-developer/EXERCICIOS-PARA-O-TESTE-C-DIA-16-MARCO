@@ -36,7 +36,7 @@
             this.cbbCursos = new System.Windows.Forms.ComboBox();
             this.grbGenero = new System.Windows.Forms.GroupBox();
             this.rdbFem = new System.Windows.Forms.RadioButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imgl = new System.Windows.Forms.ImageList(this.components);
             this.rdbMasc = new System.Windows.Forms.RadioButton();
             this.btnInscrever = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             // lblNum
             // 
             this.lblNum.AutoSize = true;
-            this.lblNum.Location = new System.Drawing.Point(17, 21);
+            this.lblNum.Location = new System.Drawing.Point(11, 9);
             this.lblNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(44, 13);
@@ -59,7 +59,7 @@
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(229, 21);
+            this.lblCurso.Location = new System.Drawing.Point(151, 9);
             this.lblCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(34, 13);
@@ -68,7 +68,7 @@
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(20, 45);
+            this.txtNum.Location = new System.Drawing.Point(11, 24);
             this.txtNum.Margin = new System.Windows.Forms.Padding(2);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(76, 20);
@@ -87,7 +87,7 @@
             "TG",
             "TOO",
             "TM"});
-            this.cbbCursos.Location = new System.Drawing.Point(224, 45);
+            this.cbbCursos.Location = new System.Drawing.Point(154, 23);
             this.cbbCursos.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCursos.Name = "cbbCursos";
             this.cbbCursos.Size = new System.Drawing.Size(92, 21);
@@ -97,11 +97,11 @@
             // 
             this.grbGenero.Controls.Add(this.rdbFem);
             this.grbGenero.Controls.Add(this.rdbMasc);
-            this.grbGenero.Location = new System.Drawing.Point(9, 91);
+            this.grbGenero.Location = new System.Drawing.Point(11, 60);
             this.grbGenero.Margin = new System.Windows.Forms.Padding(2);
             this.grbGenero.Name = "grbGenero";
             this.grbGenero.Padding = new System.Windows.Forms.Padding(2);
-            this.grbGenero.Size = new System.Drawing.Size(125, 107);
+            this.grbGenero.Size = new System.Drawing.Size(125, 89);
             this.grbGenero.TabIndex = 4;
             this.grbGenero.TabStop = false;
             this.grbGenero.Text = "Sexo";
@@ -109,7 +109,7 @@
             // rdbFem
             // 
             this.rdbFem.AutoSize = true;
-            this.rdbFem.ImageList = this.imageList1;
+            this.rdbFem.ImageList = this.imgl;
             this.rdbFem.Location = new System.Drawing.Point(3, 63);
             this.rdbFem.Margin = new System.Windows.Forms.Padding(2);
             this.rdbFem.Name = "rdbFem";
@@ -118,18 +118,25 @@
             this.rdbFem.Text = "Femenino";
             this.rdbFem.UseVisualStyleBackColor = true;
             // 
-            // imageList1
+            // imgl
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-Female-50.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-Male-50.png");
+            this.imgl.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgl.ImageStream")));
+            this.imgl.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgl.Images.SetKeyName(0, "female.png");
+            this.imgl.Images.SetKeyName(1, "male.png");
+            this.imgl.Images.SetKeyName(2, "earth.ico");
+            this.imgl.Images.SetKeyName(3, "jupiter.ico");
+            this.imgl.Images.SetKeyName(4, "mars.ico");
+            this.imgl.Images.SetKeyName(5, "mercury.ico");
+            this.imgl.Images.SetKeyName(6, "moon.ico");
+            this.imgl.Images.SetKeyName(7, "Thanos.ico");
+            this.imgl.Images.SetKeyName(8, "venus.ico");
             // 
             // rdbMasc
             // 
             this.rdbMasc.AutoSize = true;
             this.rdbMasc.Checked = true;
-            this.rdbMasc.ImageList = this.imageList1;
+            this.rdbMasc.ImageList = this.imgl;
             this.rdbMasc.Location = new System.Drawing.Point(2, 15);
             this.rdbMasc.Margin = new System.Windows.Forms.Padding(2);
             this.rdbMasc.Name = "rdbMasc";
@@ -142,10 +149,10 @@
             // btnInscrever
             // 
             this.btnInscrever.Enabled = false;
-            this.btnInscrever.Location = new System.Drawing.Point(294, 103);
+            this.btnInscrever.Location = new System.Drawing.Point(285, 60);
             this.btnInscrever.Margin = new System.Windows.Forms.Padding(2);
             this.btnInscrever.Name = "btnInscrever";
-            this.btnInscrever.Size = new System.Drawing.Size(56, 19);
+            this.btnInscrever.Size = new System.Drawing.Size(64, 19);
             this.btnInscrever.TabIndex = 5;
             this.btnInscrever.Text = "Increver";
             this.btnInscrever.UseVisualStyleBackColor = true;
@@ -154,10 +161,10 @@
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(294, 180);
+            this.btnEliminar.Location = new System.Drawing.Point(285, 123);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(56, 19);
+            this.btnEliminar.Size = new System.Drawing.Size(64, 19);
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -165,9 +172,12 @@
             // 
             // trvInscricoes
             // 
-            this.trvInscricoes.Location = new System.Drawing.Point(12, 221);
+            this.trvInscricoes.ImageIndex = 0;
+            this.trvInscricoes.ImageList = this.imgl;
+            this.trvInscricoes.Location = new System.Drawing.Point(8, 202);
             this.trvInscricoes.Margin = new System.Windows.Forms.Padding(2);
             this.trvInscricoes.Name = "trvInscricoes";
+            this.trvInscricoes.SelectedImageIndex = 0;
             this.trvInscricoes.Size = new System.Drawing.Size(350, 135);
             this.trvInscricoes.TabIndex = 7;
             this.trvInscricoes.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.trvInscricoes_AfterCollapse);
@@ -177,7 +187,7 @@
             // lblInsc
             // 
             this.lblInsc.AutoSize = true;
-            this.lblInsc.Location = new System.Drawing.Point(9, 206);
+            this.lblInsc.Location = new System.Drawing.Point(8, 187);
             this.lblInsc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInsc.Name = "lblInsc";
             this.lblInsc.Size = new System.Drawing.Size(55, 13);
@@ -186,9 +196,9 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(513, 333);
+            this.btnOK.Location = new System.Drawing.Point(2, 342);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(363, 23);
             this.btnOK.TabIndex = 9;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -198,7 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(366, 366);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblInsc);
             this.Controls.Add(this.trvInscricoes);
@@ -234,7 +244,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TreeView trvInscricoes;
         private System.Windows.Forms.Label lblInsc;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imgl;
         private System.Windows.Forms.Button btnOK;
     }
 }
