@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\bin\Debug\Inter240083.exe.config
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\bin\Debug\Inter240083.exe
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\bin\Debug\Inter240083.pdb
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.Form1.resources
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.Properties.Resources.resources
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.exe
+C:\Users\Administrator\Desktop\PSI-codigos--main\Inter240083\Inter240083\obj\Debug\Inter240083.pdb
