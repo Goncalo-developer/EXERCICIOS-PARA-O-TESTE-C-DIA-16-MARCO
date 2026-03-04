@@ -1,0 +1,11 @@
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.csproj.AssemblyReference.cache
+C:\Users\I240083\Desktop\f6\f6\bin\Debug\f6.exe.config
+C:\Users\I240083\Desktop\f6\f6\bin\Debug\f6.exe
+C:\Users\I240083\Desktop\f6\f6\bin\Debug\f6.pdb
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.Form1.resources
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.Properties.Resources.resources
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.csproj.GenerateResource.cache
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.csproj.CoreCompileInputs.cache
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.exe
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.pdb
+C:\Users\I240083\Desktop\f6\f6\obj\Debug\f6.exe.config

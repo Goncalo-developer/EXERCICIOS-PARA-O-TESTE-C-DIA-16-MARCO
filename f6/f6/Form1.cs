@@ -47,22 +47,102 @@ namespace f6
             else if (cbbCurso.Text == "TOSP")
                 imgindex = 6;
 
+            int contador = 0;
+
+            foreach (ListViewItem item in lstvInsc.Items)
+            {
+                if (item.Text == txtNum.Text)
+                {
+                    contador++;
+
+                    if (item.SubItems[2].Text == cbbCurso.Text)
+                    {
+                        MessageBox.Show("Este número já está inscrito neste curso!");
+                        return;
+                    }
+                }
+            }
+
+            if (contador >= 3)
+            {
+                MessageBox.Show("Este número já tem 3 inscrições!");
+                return;
+            }
+
             ListViewItem novoItem = new ListViewItem(txtNum.Text, imgindex);
-             
 
-            lstvInsc.Items.Add(novoItem);
-
-
-            ListViewItem novoItem1 = new ListViewItem(grpGenero.Text, imgindex);
             if (rdbMasc.Checked)
                 novoItem.SubItems.Add("M");
             else
                 novoItem.SubItems.Add("F");
 
-            ListViewItem novoItem2 = new ListViewItem(cbbCurso.Text, imgindex);
-            lstvInsc.Items.Add(novoItem2);
+            novoItem.SubItems.Add(cbbCurso.Text);
 
+            lstvInsc.Items.Add(novoItem);
+          
+        }
+
+        private void lstvInsc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnElim.Enabled = lstvInsc.SelectedItems.Count > 0;
 
         }
+
+        private void btnElim_Click(object sender, EventArgs e)
+        {
+
+            if (lstvInsc.SelectedItems.Count != 0)
+            {
+                ListViewItem item = lstvInsc.SelectedItems[0];
+
+                if (item.SubItems[2].Text == cbbCurso.Text)
+                    lstvInsc.Items.Remove(item);
+            }
+
+            btnElim.Enabled = false;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            string relatorio = "Relatório de Inscrições:\n\n";
+            int totalGlobal = 0;
+
+            string[] cursos = { "TGPSI", "TOO", "TER", "TEAC", "TOSP" };
+
+            foreach (string cursoAtual in cursos)
+            {
+                int totalCurso = 0;
+                int rapazes = 0;
+                int raparigas = 0;
+
+                foreach (ListViewItem item in lstvInsc.Items)
+                {
+                    if (item.SubItems[2].Text == cursoAtual)
+                    {
+                        totalCurso++;
+
+                        if (item.SubItems[1].Text == "M")
+                            rapazes++;
+                        else
+                            raparigas++;
+                    }
+                }
+
+                relatorio += "Curso: " + cursoAtual + " - " + totalCurso +
+                             " inscrições (" + rapazes + " rapazes, " +
+                             raparigas + " raparigas)\n";
+
+                totalGlobal += totalCurso;
+            }
+
+            relatorio += "\nTotal Global: " + totalGlobal + " inscrições.";
+
+            MessageBox.Show(relatorio, "Estatísticas de Inscrições",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Application.Exit();
+        }
     }
-}
+    }
+    
+

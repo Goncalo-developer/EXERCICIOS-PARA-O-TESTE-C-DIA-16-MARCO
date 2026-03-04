@@ -35,15 +35,15 @@
             this.cbbCurso = new System.Windows.Forms.ComboBox();
             this.lblCurso = new System.Windows.Forms.Label();
             this.grpGenero = new System.Windows.Forms.GroupBox();
-            this.rdbMasc = new System.Windows.Forms.RadioButton();
             this.rdbFem = new System.Windows.Forms.RadioButton();
+            this.rdbMasc = new System.Windows.Forms.RadioButton();
             this.btnInsc = new System.Windows.Forms.Button();
+            this.imglist1 = new System.Windows.Forms.ImageList(this.components);
             this.btnElim = new System.Windows.Forms.Button();
             this.lstvInsc = new System.Windows.Forms.ListView();
             this.clmNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmGenero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCurso = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imglist1 = new System.Windows.Forms.ImageList(this.components);
             this.btnOK = new System.Windows.Forms.Button();
             this.grpGenero.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             // 
             // cbbCurso
             // 
+            this.cbbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCurso.FormattingEnabled = true;
             this.cbbCurso.Items.AddRange(new object[] {
             "TGPSI",
@@ -101,6 +102,16 @@
             this.grpGenero.TabStop = false;
             this.grpGenero.Text = "Género";
             // 
+            // rdbFem
+            // 
+            this.rdbFem.AutoSize = true;
+            this.rdbFem.Location = new System.Drawing.Point(3, 63);
+            this.rdbFem.Name = "rdbFem";
+            this.rdbFem.Size = new System.Drawing.Size(83, 20);
+            this.rdbFem.TabIndex = 1;
+            this.rdbFem.Text = "Feminino";
+            this.rdbFem.UseVisualStyleBackColor = true;
+            // 
             // rdbMasc
             // 
             this.rdbMasc.AutoSize = true;
@@ -112,16 +123,6 @@
             this.rdbMasc.TabStop = true;
             this.rdbMasc.Text = "Masculino";
             this.rdbMasc.UseVisualStyleBackColor = true;
-            // 
-            // rdbFem
-            // 
-            this.rdbFem.AutoSize = true;
-            this.rdbFem.Location = new System.Drawing.Point(3, 63);
-            this.rdbFem.Name = "rdbFem";
-            this.rdbFem.Size = new System.Drawing.Size(83, 20);
-            this.rdbFem.TabIndex = 1;
-            this.rdbFem.Text = "Feminino";
-            this.rdbFem.UseVisualStyleBackColor = true;
             // 
             // btnInsc
             // 
@@ -135,6 +136,18 @@
             this.btnInsc.UseVisualStyleBackColor = true;
             this.btnInsc.Click += new System.EventHandler(this.btnInsc_Click);
             // 
+            // imglist1
+            // 
+            this.imglist1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglist1.ImageStream")));
+            this.imglist1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imglist1.Images.SetKeyName(0, "female.png");
+            this.imglist1.Images.SetKeyName(1, "male.png");
+            this.imglist1.Images.SetKeyName(2, "CTRCAN.ICO");
+            this.imglist1.Images.SetKeyName(3, "CTRFRAN.ICO");
+            this.imglist1.Images.SetKeyName(4, "CTRMEX.ICO");
+            this.imglist1.Images.SetKeyName(5, "CTRSKOR.ICO");
+            this.imglist1.Images.SetKeyName(6, "CTRSPAIN.ICO");
+            // 
             // btnElim
             // 
             this.btnElim.Enabled = false;
@@ -144,6 +157,7 @@
             this.btnElim.TabIndex = 6;
             this.btnElim.Text = "Eliminar";
             this.btnElim.UseVisualStyleBackColor = true;
+            this.btnElim.Click += new System.EventHandler(this.btnElim_Click);
             // 
             // lstvInsc
             // 
@@ -161,6 +175,7 @@
             this.lstvInsc.TabIndex = 2;
             this.lstvInsc.UseCompatibleStateImageBehavior = false;
             this.lstvInsc.View = System.Windows.Forms.View.Details;
+            this.lstvInsc.SelectedIndexChanged += new System.EventHandler(this.lstvInsc_SelectedIndexChanged);
             // 
             // clmNum
             // 
@@ -179,18 +194,6 @@
             this.clmCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.clmCurso.Width = 80;
             // 
-            // imglist1
-            // 
-            this.imglist1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglist1.ImageStream")));
-            this.imglist1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imglist1.Images.SetKeyName(0, "female.png");
-            this.imglist1.Images.SetKeyName(1, "male.png");
-            this.imglist1.Images.SetKeyName(2, "CTRCAN.ICO");
-            this.imglist1.Images.SetKeyName(3, "CTRFRAN.ICO");
-            this.imglist1.Images.SetKeyName(4, "CTRMEX.ICO");
-            this.imglist1.Images.SetKeyName(5, "CTRSKOR.ICO");
-            this.imglist1.Images.SetKeyName(6, "CTRSPAIN.ICO");
-            // 
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(20, 417);
@@ -199,6 +202,7 @@
             this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // Form1
             // 
