@@ -1,0 +1,11 @@
+C:\Users\I240083\source\repos\exExtra\exExtra\bin\Debug\exExtra.exe.config
+C:\Users\I240083\source\repos\exExtra\exExtra\bin\Debug\exExtra.exe
+C:\Users\I240083\source\repos\exExtra\exExtra\bin\Debug\exExtra.pdb
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.csproj.AssemblyReference.cache
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.Form1.resources
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.Properties.Resources.resources
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.csproj.GenerateResource.cache
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.csproj.CoreCompileInputs.cache
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.exe
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.pdb
+C:\Users\I240083\source\repos\exExtra\exExtra\obj\Debug\exExtra.exe.config
